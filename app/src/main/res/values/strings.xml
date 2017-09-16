@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">GamerTools</string>
     <string name="button">Button</string>
+    <string name="dice">Dice</string>
+    <string name="gamer">Gamer</string>
+    <string name="score_keeper">Score Keeper</string>
+    <string name="tools">Tools</string>
 </resources>
