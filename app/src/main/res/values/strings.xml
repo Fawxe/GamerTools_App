@@ -5,4 +5,19 @@
     <string name="gamer">Gamer</string>
     <string name="score_keeper">Score Keeper</string>
     <string name="tools">Tools</string>
+    <string name="_0">0</string>
+    <string name="decrease_score_by_large_amount">Decrease score by large amount</string>
+    <string name="_00">0</string>
+    <string name="decrease_score_by_small_amount">Decrease score by small amount</string>
+    <string name="increase_score_by_large_amount">Increase score by large amount</string>
+    <string name="increase_score_by_small_amount">Increase score by small amount</string>
+    <string name="roll">Roll</string>
+    <string name="_Score">0</string>
+    <string name="string_score" />
+    <string name="string_string_score">0</string>
+    <string name="_5">5</string>
+    <string name="_1">1</string>
+    <string name="_6">6</string>
+    <string name="dice_text">Dice</string>
+    <string name="sides">Sides</string>
 </resources>
