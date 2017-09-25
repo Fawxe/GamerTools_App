@@ -17,7 +17,7 @@ public class Score_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_score_);
     }
 
-    public void click_Minor_Up(View view) //create an event for the strike button
+    public void click_Minor_Up(View view) //increase score by minor value
 
     {
         TextView Score_Text = (TextView) findViewById(R.id.Score_Text);
@@ -30,7 +30,7 @@ public class Score_Activity extends AppCompatActivity {
     }
 
 
-    public void click_Major_Up(View view) //create an event for the strike button
+    public void click_Major_Up(View view) //increase score by major value
 
     {
         TextView Score_Text = (TextView) findViewById(R.id.Score_Text);
@@ -43,7 +43,7 @@ public class Score_Activity extends AppCompatActivity {
     }
 
 
-    public void click_Minor_Down(View view) //create an event for the strike button
+    public void click_Minor_Down(View view) //decrease score by minor value
 
     {
         TextView Score_Text = (TextView) findViewById(R.id.Score_Text);
@@ -54,7 +54,7 @@ public class Score_Activity extends AppCompatActivity {
         Score_Text.setText(Score + "");
 
     }
-    public void click_Major_Down(View view) //create an event for the strike button
+    public void click_Major_Down(View view) //decrease score by major value
 
     {
         TextView Score_Text = (TextView) findViewById(R.id.Score_Text);

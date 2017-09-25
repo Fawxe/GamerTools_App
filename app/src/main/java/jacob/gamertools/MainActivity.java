@@ -14,13 +14,13 @@ public class MainActivity extends AppCompatActivity {
         this.setVisible(true);
     }
 
-    public void click_Score(View view)
+    public void click_Score(View view)//go to Scorekeeping screen on button click
     {
         startActivity(new Intent(MainActivity.this, Score_Activity.class));
 
     }
 
-    public void click_Dice(View view)
+    public void click_Dice(View view) //go to Dice screen on button click
     {
         startActivity(new Intent(MainActivity.this, Dice_Activity.class));
 
