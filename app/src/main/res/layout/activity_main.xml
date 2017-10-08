@@ -50,7 +50,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:onClick="click_Score"
+        android:onClick="click_Score_2"
         android:text="@string/score_keeper"
         android:textSize="24sp"
         android:visibility="visible"

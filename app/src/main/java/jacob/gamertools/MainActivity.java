@@ -20,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void click_Score_2(View view)//go to Scorekeeping screen on button click
+    {
+        startActivity(new Intent(MainActivity.this, Score_Activity_2.class));
+
+    }
+
+
     public void click_Dice(View view) //go to Dice screen on button click
     {
         startActivity(new Intent(MainActivity.this, Dice_Activity.class));
