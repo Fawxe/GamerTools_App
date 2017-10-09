@@ -19,6 +19,10 @@
         <activity android:name=".Dice_Activity" />
         <activity android:name=".Score_Activity" />
         <activity android:name=".Score_Activity_2" />
+        <activity android:name=".Score_Activity_3" />
+        <activity android:name=".Score_Activity_4" />
+        <activity android:name=".Score_Activity_5" />
+        <activity android:name=".Score_Activity_6" />
     </application>
 
 </manifest>

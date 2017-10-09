@@ -111,4 +111,103 @@ public class Score_Activity_4 extends AppCompatActivity {
 
     }
 
+    public void click_Minor_Up_3(View view) //increase score by minor value
+
+    {
+        TextView Score_Text = (TextView) findViewById(R.id.Score_Text_3);
+        int Score = Integer.parseInt(Score_Text.getText().toString());
+
+        Score++;
+
+        Score_Text.setText(Score + "");
+
+    }
+
+
+    public void click_Major_Up_3(View view) //increase score by major value
+
+    {
+        TextView Score_Text = (TextView) findViewById(R.id.Score_Text_3);
+        int Score = Integer.parseInt(Score_Text.getText().toString());
+
+        Score=Score+10;
+
+        Score_Text.setText(Score + "");
+
+    }
+
+
+    public void click_Minor_Down_3(View view) //decrease score by minor value
+
+    {
+        TextView Score_Text = (TextView) findViewById(R.id.Score_Text_3);
+        int Score = Integer.parseInt(Score_Text.getText().toString());
+
+        Score--;
+
+        Score_Text.setText(Score + "");
+
+    }
+    public void click_Major_Down_3(View view) //decrease score by major value
+
+    {
+        TextView Score_Text = (TextView) findViewById(R.id.Score_Text_3);
+        int Score = Integer.parseInt(Score_Text.getText().toString());
+
+        Score=Score-10;
+
+        Score_Text.setText(Score + "");
+
+    }
+
+    public void click_Minor_Up_4(View view) //increase score by minor value
+
+    {
+        TextView Score_Text = (TextView) findViewById(R.id.Score_Text_4);
+        int Score = Integer.parseInt(Score_Text.getText().toString());
+
+        Score++;
+
+        Score_Text.setText(Score + "");
+
+    }
+
+
+    public void click_Major_Up_4(View view) //increase score by major value
+
+    {
+        TextView Score_Text = (TextView) findViewById(R.id.Score_Text_4);
+        int Score = Integer.parseInt(Score_Text.getText().toString());
+
+        Score=Score+10;
+
+        Score_Text.setText(Score + "");
+
+    }
+
+
+    public void click_Minor_Down_4(View view) //decrease score by minor value
+
+    {
+        TextView Score_Text = (TextView) findViewById(R.id.Score_Text_4);
+        int Score = Integer.parseInt(Score_Text.getText().toString());
+
+        Score--;
+
+        Score_Text.setText(Score + "");
+
+    }
+    public void click_Major_Down_4(View view) //decrease score by major value
+
+    {
+        TextView Score_Text = (TextView) findViewById(R.id.Score_Text_4);
+        int Score = Integer.parseInt(Score_Text.getText().toString());
+
+        Score=Score-10;
+
+        Score_Text.setText(Score + "");
+
+    }
+
+
 }

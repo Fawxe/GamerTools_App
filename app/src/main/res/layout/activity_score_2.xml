@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"
-        tools:context="jacob.gamertools.Score_Activity">
+        tools:context="jacob.gamertools.Score_Activity_2">
 
         <ImageButton
             android:id="@+id/major_Down_Button_2"

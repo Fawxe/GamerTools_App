@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void click_Score(View view)//go to Scorekeeping screen on button click
     {
-        String[] playerArray = {"1","2","3","4","5","6"};
+        String[] playerArray = {"1","2","3","4"};
 
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -47,17 +47,18 @@ public class MainActivity extends AppCompatActivity {
                 {
                     startActivity(new Intent(MainActivity.this, Score_Activity_4.class));
                 }
-
+/*
                 else if(which==4)
                 {
                     startActivity(new Intent(MainActivity.this, Score_Activity_5.class));
                 }
 
+
                 else if(which==5)
                 {
                     startActivity(new Intent(MainActivity.this, Score_Activity_6.class));
                 }
-
+*/
                 else
                 {
                     startActivity(new Intent(MainActivity.this, Score_Activity.class));
