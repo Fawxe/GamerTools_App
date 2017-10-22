@@ -7,6 +7,19 @@
     android:visibility="visible"
     tools:context="jacob.gamertools.Score_Activity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/Score_Toolbar"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="-3dp"
+        tools:ignore="MissingConstraints"/>
+
+
+
     <ImageButton
         android:id="@+id/minor_Down_Button"
         android:layout_width="50dp"
