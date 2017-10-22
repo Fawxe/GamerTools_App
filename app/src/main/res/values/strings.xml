@@ -21,4 +21,12 @@
     <string name="dice_text">Dice</string>
     <string name="sides">Sides</string>
     <string name="gamer_tools">Gamer Tools</string>
+    <string name="accept">Accept</string>
+    <string name="major_increase_value">Major Increase Value</string>
+    <string name="major_decrease_value">Major Decrease Value</string>
+    <string name="minor_decrease_value">Minor Decrease Value</string>
+    <string name="minor_increase_value">Minor Increase Value</string>
+    <string name="tab1" />
+    <string name="tab2" />
+    <string name="options">Options</string>
 </resources>

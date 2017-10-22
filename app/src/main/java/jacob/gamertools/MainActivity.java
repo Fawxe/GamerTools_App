@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.setVisible(true);
+
+
     }
 
     public void click_Score(View view)//go to Scorekeeping screen on button click
