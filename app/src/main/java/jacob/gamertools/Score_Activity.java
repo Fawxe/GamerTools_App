@@ -18,6 +18,18 @@ public class Score_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_);
 
+        /*
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
+        int preset_Minor_Up = sharedPref.getInt(getString(R.string.preset_Minor_Up), 1);
+        int preset_Major_Up = sharedPref.getInt(getString(R.string.preset_Major_Up), 10);
+        int preset_Minor_Down = sharedPref.getInt(getString(R.string.preset_Minor_Down), 1);
+        int preset_Major_Down = sharedPref.getInt(getString(R.string.preset_Major_Down), 10);
+
+        variables.setLarge_decrease(preset_Major_Down);
+        variables.setLarge_increase(preset_Major_Up);
+        variables.setSmall_increase(preset_Minor_Up);
+        variables.setSmall_decrease(preset_Minor_Down);
+*/
     }
 
 
@@ -85,6 +97,17 @@ public class Score_Activity extends AppCompatActivity {
             variables.setSmall_increase(Minor_Increase);
         }catch(IllegalArgumentException e)
         {}
+
+        /*
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.preset_Major_Down), variables.getLarge_decrease());
+        editor.putInt(getString(R.string.preset_Major_Up), variables.getLarge_increase());
+        editor.putInt(getString(R.string.preset_Minor_Down), variables.getSmall_decrease());
+        editor.putInt(getString(R.string.preset_Minor_Up), variables.getSmall_increase());
+        editor.commit();
+*/
+
     }
 
 

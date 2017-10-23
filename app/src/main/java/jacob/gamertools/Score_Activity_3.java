@@ -1,5 +1,7 @@
 package jacob.gamertools;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,6 +13,18 @@ public class Score_Activity_3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_3);
+/*
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
+        int preset_Minor_Up_3 = sharedPref.getInt(getString(R.string.preset_Minor_Up_3), 1);
+        int preset_Major_Up_3 = sharedPref.getInt(getString(R.string.preset_Major_Up_3), 10);
+        int preset_Minor_Down_3 = sharedPref.getInt(getString(R.string.preset_Minor_Down_3), 1);
+        int preset_Major_Down_3 = sharedPref.getInt(getString(R.string.preset_Major_Down_3), 10);
+
+        variables.setLarge_decrease(preset_Major_Down_3);
+        variables.setLarge_increase(preset_Major_Up_3);
+        variables.setSmall_increase(preset_Minor_Up_3);
+        variables.setSmall_decrease(preset_Minor_Down_3);
+        */
     }
 
 
@@ -60,6 +74,16 @@ public class Score_Activity_3 extends AppCompatActivity {
             variables.setSmall_increase(Minor_Increase);
         }catch(IllegalArgumentException e)
         {}
+
+        /*
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.preset_Major_Down_3), variables.getLarge_decrease());
+        editor.putInt(getString(R.string.preset_Major_Up_3), variables.getLarge_increase());
+        editor.putInt(getString(R.string.preset_Minor_Down_3), variables.getSmall_decrease());
+        editor.putInt(getString(R.string.preset_Minor_Up_3), variables.getSmall_increase());
+        editor.commit();
+*/
     }
 
 
