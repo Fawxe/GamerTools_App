@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="click_Counter_Tab_4"
-                android:text="Button"
+                android:text="Score"
                 tools:ignore="HardcodedText"
                 tools:layout_editor_absoluteX="267dp"
                 tools:layout_editor_absoluteY="28dp" />
