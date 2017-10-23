@@ -29,4 +29,5 @@
     <string name="tab1" />
     <string name="tab2" />
     <string name="options">Options</string>
+    <string name="preset_Players">\"1\"</string>
 </resources>

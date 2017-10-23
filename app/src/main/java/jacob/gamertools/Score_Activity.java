@@ -18,8 +18,6 @@ public class Score_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_);
 
-
-
     }
 
 
@@ -56,27 +54,37 @@ public class Score_Activity extends AppCompatActivity {
 
     public void click_Accept_Button(View view)
     {
-        TextView Major_Increase_Value = (TextView) findViewById(R.id.Major_Increase);
-        int Major_Increase = Integer.parseInt(Major_Increase_Value.getText().toString());
+        try {
+            TextView Major_Increase_Value = (TextView) findViewById(R.id.Major_Increase);
+            int Major_Increase = Integer.parseInt(Major_Increase_Value.getText().toString());
 
-        variables.setLarge_increase(Major_Increase);
+            variables.setLarge_increase(Major_Increase);
+        }catch(IllegalArgumentException e)
+        {}
 
+        try{
+            TextView Major_Decrease_Value = (TextView) findViewById(R.id.Major_Decrease);
+            int Major_Decrease = Integer.parseInt(Major_Decrease_Value.getText().toString());
 
-        TextView Major_Decrease_Value = (TextView) findViewById(R.id.Major_Decrease);
-        int Major_Decrease = Integer.parseInt(Major_Decrease_Value.getText().toString());
+            variables.setLarge_decrease(Major_Decrease);
+        }catch(IllegalArgumentException e)
+        {}
 
-        variables.setLarge_decrease(Major_Decrease);
+        try{
+            TextView Minor_Decrease_Value = (TextView) findViewById(R.id.Minor_Decrease);
+            int Minor_Decrease = Integer.parseInt(Minor_Decrease_Value.getText().toString());
 
-        TextView Minor_Decrease_Value = (TextView) findViewById(R.id.Minor_Decrease);
-        int Minor_Decrease = Integer.parseInt(Minor_Decrease_Value.getText().toString());
+            variables.setSmall_decrease(Minor_Decrease);
+        }catch(IllegalArgumentException e)
+        {}
 
-        variables.setSmall_decrease(Minor_Decrease);
+        try{
+            TextView Minor_Increase_Value = (TextView) findViewById(R.id.Minor_Increase);
+            int Minor_Increase = Integer.parseInt(Minor_Increase_Value.getText().toString());
 
-        TextView Minor_Increase_Value = (TextView) findViewById(R.id.Minor_Increase);
-        int Minor_Increase = Integer.parseInt(Minor_Increase_Value.getText().toString());
-
-        variables.setSmall_increase(Minor_Increase);
-
+            variables.setSmall_increase(Minor_Increase);
+        }catch(IllegalArgumentException e)
+        {}
     }
 
 
@@ -86,7 +94,7 @@ public class Score_Activity extends AppCompatActivity {
         TextView Score_Text = (TextView) findViewById(R.id.Score_Text);
         int Score = Integer.parseInt(Score_Text.getText().toString());
 
-        Score= Score+ variables.getSmall_increase(); //increments number of strikes
+        Score= Score+ variables.getSmall_increase();
 
         Score_Text.setText(Score + "");
 
@@ -101,7 +109,7 @@ public class Score_Activity extends AppCompatActivity {
 
 
 
-        Score=Score+variables.getLarge_increase(); //increments number of strikes
+        Score=Score+variables.getLarge_increase();
 
         Score_Text.setText(Score + "");
 
@@ -114,7 +122,7 @@ public class Score_Activity extends AppCompatActivity {
         TextView Score_Text = (TextView) findViewById(R.id.Score_Text);
         int Score = Integer.parseInt(Score_Text.getText().toString());
 
-        Score=Score-variables.getSmall_decrease(); //increments number of strikes
+        Score=Score-variables.getSmall_decrease();
 
         Score_Text.setText(Score + "");
 
@@ -125,7 +133,7 @@ public class Score_Activity extends AppCompatActivity {
         TextView Score_Text = (TextView) findViewById(R.id.Score_Text);
         int Score = Integer.parseInt(Score_Text.getText().toString());
 
-        Score=Score-variables.getLarge_decrease(); //increments number of strikes
+        Score=Score-variables.getLarge_decrease();
 
         Score_Text.setText(Score + "");
 

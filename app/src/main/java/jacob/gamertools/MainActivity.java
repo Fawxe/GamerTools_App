@@ -1,8 +1,10 @@
 package jacob.gamertools;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.setVisible(true);
 
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
+        String preset_Players = sharedPref.getString(getString(R.string.preset_Players), "1");
+        String preset_Players_2 = sharedPref.getString(getString(R.string.preset_Players), "1");
+        String preset_Players_3 = sharedPref.getString(getString(R.string.preset_Players), "1");
 
     }
 

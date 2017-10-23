@@ -22,7 +22,7 @@
                 android:id="@+id/Score_Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="click_Counter_Tab"
+                android:onClick="click_Counter_Tab_4"
                 android:text="Button"
                 tools:ignore="HardcodedText"
                 tools:layout_editor_absoluteX="267dp"
@@ -130,10 +130,10 @@
             tools:context="jacob.gamertools.Score_Activity">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/Options_Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="click_Options_Tab"
+                android:onClick="click_Options_Tab_4"
                 android:text="@string/options"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="267dp"
