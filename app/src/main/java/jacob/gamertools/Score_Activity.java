@@ -98,6 +98,13 @@ public class Score_Activity extends AppCompatActivity {
         }catch(IllegalArgumentException e)
         {}
 
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Changes Made Successfully");
+        alertDialogBuilder.setMessage("Changes Made Successfully");
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
         /*
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();

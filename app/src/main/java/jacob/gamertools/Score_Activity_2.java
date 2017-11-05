@@ -3,6 +3,7 @@ package jacob.gamertools;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -49,7 +50,7 @@ public class Score_Activity_2 extends AppCompatActivity {
             int Major_Increase = Integer.parseInt(Major_Increase_Value.getText().toString());
 
             variables.setLarge_increase(Major_Increase);
-        }catch(IllegalArgumentException e)
+        }catch(IllegalArgumentException e)                  //if there is nothing there, move to the next
         {}
 
         try{
@@ -75,6 +76,14 @@ public class Score_Activity_2 extends AppCompatActivity {
             variables.setSmall_increase(Minor_Increase);
         }catch(IllegalArgumentException e)
         {}
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Changes Made Successfully");
+        alertDialogBuilder.setMessage("Changes Made Successfully");
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
 /*
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();

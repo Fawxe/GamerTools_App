@@ -58,7 +58,10 @@ public class Dice_Activity extends AppCompatActivity {
             Random rand = new Random(System.currentTimeMillis());  //RNG based on current Millisecond
             result = rand.nextInt(max) + dice;
         } catch(ArithmeticException e)
-        {return;}
+        {
+            overflow=true;
+            return;
+        }
         TextView Roll_Result = (TextView) findViewById(R.id.Roll_Result); //show result
         Roll_Result.setText(result + ""); //convert number to string
         if(overflow)
