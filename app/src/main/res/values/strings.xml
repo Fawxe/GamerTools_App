@@ -46,4 +46,5 @@
     <string name="preset_Major_Up_4" />
     <string name="preset_Minor_Down_4" />
     <string name="preset_Major_Down_4" />
+    <string name="past_rolls_n">Past Rolls</string>
 </resources>
