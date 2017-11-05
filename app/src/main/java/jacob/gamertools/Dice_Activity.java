@@ -22,18 +22,33 @@ public class Dice_Activity extends AppCompatActivity {
     {
         int sides=6;  //default numbers
         int dice=1;
+        int result=0;
+        try {
+            TextView Dice_Count = (TextView) findViewById(R.id.Dice_Number);
+            if(Dice_Count.getText().length()>9)
+            {dice=0;}
+            else {
+                dice = Integer.parseInt(Dice_Count.getText().toString());
+            }
+            TextView Side_Count = (TextView) findViewById(R.id.Side_Number);
+            if(Side_Count.getText().length()>9)
+            {sides=0;}
+            else {
+                sides = Integer.parseInt(Side_Count.getText().toString());
+            }
+            int max=0;
+            if (dice != 0 && Math.abs(sides) > Math.abs(Long.MAX_VALUE / dice))
+            {
+                throw new ArithmeticException();
+            }  //the highest possible dice roll is the number of dice times their highest possible value
 
-        TextView Dice_Count = (TextView) findViewById(R.id.Dice_Number);
-        dice = Integer.parseInt(Dice_Count.getText().toString());
+            else
+                max=dice*sides;
 
-        TextView Side_Count = (TextView) findViewById(R.id.Side_Number);
-        sides = Integer.parseInt(Side_Count.getText().toString());
-
-        int max=sides*dice;  //the highest possible dice roll is the number of dice times their highest possible value
-
-        Random rand = new Random(System.currentTimeMillis());  //RNG based on current Millisecond
-        int result= rand.nextInt(max)+dice;
-
+            Random rand = new Random(System.currentTimeMillis());  //RNG based on current Millisecond
+            result = rand.nextInt(max) + dice;
+        } catch(ArithmeticException e)
+        {}
         TextView Roll_Result = (TextView) findViewById(R.id.Roll_Result); //show result
 
         Roll_Result.setText(result + ""); //convert number to string
