@@ -23,20 +23,21 @@ public class Dice_Activity extends AppCompatActivity {
         int sides=6;  //default numbers
         int dice=1;
         int result=0;
+        int max=0;
         try {
             TextView Dice_Count = (TextView) findViewById(R.id.Dice_Number);
             if(Dice_Count.getText().length()>9)
-            {dice=0;}
+            {dice=1;}                                  //////////////
             else {
                 dice = Integer.parseInt(Dice_Count.getText().toString());
             }
             TextView Side_Count = (TextView) findViewById(R.id.Side_Number);
             if(Side_Count.getText().length()>9)
-            {sides=0;}
+            {sides=1;}                                ///////////////
             else {
                 sides = Integer.parseInt(Side_Count.getText().toString());
             }
-            int max=0;
+
             if (dice != 0 && Math.abs(sides) > Math.abs(Long.MAX_VALUE / dice))
             {
                 throw new ArithmeticException();
