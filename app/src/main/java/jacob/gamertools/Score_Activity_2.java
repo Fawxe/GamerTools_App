@@ -45,6 +45,7 @@ public class Score_Activity_2 extends AppCompatActivity {
 
     public void click_Accept_Button(View view)
     {
+
         try {
             TextView Major_Increase_Value = (TextView) findViewById(R.id.Major_Increase);
             int Major_Increase = Integer.parseInt(Major_Increase_Value.getText().toString());
@@ -77,6 +78,7 @@ public class Score_Activity_2 extends AppCompatActivity {
         }catch(IllegalArgumentException e)
         {}
 
+
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Changes Made Successfully");
         alertDialogBuilder.setMessage("Changes Made Successfully");
@@ -95,7 +97,6 @@ public class Score_Activity_2 extends AppCompatActivity {
 */
 
     }
-
 
 
 
