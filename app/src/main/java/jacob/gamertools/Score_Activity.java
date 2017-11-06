@@ -18,18 +18,17 @@ public class Score_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_);
 
-        /*
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
-        int preset_Minor_Up = sharedPref.getInt(getString(R.string.preset_Minor_Up), 1);
-        int preset_Major_Up = sharedPref.getInt(getString(R.string.preset_Major_Up), 10);
-        int preset_Minor_Down = sharedPref.getInt(getString(R.string.preset_Minor_Down), 1);
-        int preset_Major_Down = sharedPref.getInt(getString(R.string.preset_Major_Down), 10);
 
-        variables.setLarge_decrease(preset_Major_Down);
-        variables.setLarge_increase(preset_Major_Up);
-        variables.setSmall_increase(preset_Minor_Up);
-        variables.setSmall_decrease(preset_Minor_Down);
-*/
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
+        int Minor_Up = sharedPref.getInt("Minor_Up", 1);
+        int Major_Up = sharedPref.getInt("Major_Up", 10);
+        int Minor_Down = sharedPref.getInt("preset_Minor_Down", 1);
+        int Major_Down = sharedPref.getInt("Major_Down", 10);
+
+        variables.setLarge_decrease(Major_Down);
+        variables.setLarge_increase(Major_Up);
+        variables.setSmall_increase(Minor_Up);
+        variables.setSmall_decrease(Minor_Down);
     }
 
 
@@ -98,22 +97,27 @@ public class Score_Activity extends AppCompatActivity {
         }catch(IllegalArgumentException e)
         {}
 
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Changes Made Successfully");
         alertDialogBuilder.setMessage("Changes Made Successfully");
+        alertDialogBuilder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
 
-        /*
+
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt(getString(R.string.preset_Major_Down), variables.getLarge_decrease());
-        editor.putInt(getString(R.string.preset_Major_Up), variables.getLarge_increase());
-        editor.putInt(getString(R.string.preset_Minor_Down), variables.getSmall_decrease());
-        editor.putInt(getString(R.string.preset_Minor_Up), variables.getSmall_increase());
+        editor.putInt("Major_Down", variables.getLarge_decrease());
+        editor.putInt("Major_Up", variables.getLarge_increase());
+        editor.putInt("Minor_Down", variables.getSmall_decrease());
+        editor.putInt("Minor_Up", variables.getSmall_increase());
         editor.commit();
-*/
+
 
     }
 

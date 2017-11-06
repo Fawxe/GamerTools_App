@@ -1,6 +1,7 @@
 package jacob.gamertools;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -14,18 +15,17 @@ public class Score_Activity_4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_4);
-/*
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
-        int preset_Minor_Up_4 = sharedPref.getInt(getString(R.string.preset_Minor_Up_4), 1);
-        int preset_Major_Up_4 = sharedPref.getInt(getString(R.string.preset_Major_Up_4), 10);
-        int preset_Minor_Down_4 = sharedPref.getInt(getString(R.string.preset_Minor_Down_4), 1);
-        int preset_Major_Down_4 = sharedPref.getInt(getString(R.string.preset_Major_Down_4), 10);
 
-        variables.setLarge_decrease(preset_Major_Down_4);
-        variables.setLarge_increase(preset_Major_Up_4);
-        variables.setSmall_increase(preset_Minor_Up_4);
-        variables.setSmall_decrease(preset_Minor_Down_4);
-        */
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
+        int Minor_Up_4 = sharedPref.getInt("Minor_Up_4", 1);
+        int Major_Up_4 = sharedPref.getInt("Major_Up_4", 10);
+        int Minor_Down_4 = sharedPref.getInt("preset_Minor_Down_4", 1);
+        int Major_Down_4 = sharedPref.getInt("Major_Down_4", 10);
+
+        variables.setLarge_decrease(Major_Down_4);
+        variables.setLarge_increase(Major_Up_4);
+        variables.setSmall_increase(Minor_Up_4);
+        variables.setSmall_decrease(Minor_Down_4);
     }
 
 
@@ -79,19 +79,22 @@ public class Score_Activity_4 extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Changes Made Successfully");
         alertDialogBuilder.setMessage("Changes Made Successfully");
-
+        alertDialogBuilder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
 
-        /*
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt(getString(R.string.preset_Major_Down_4), variables.getLarge_decrease());
-        editor.putInt(getString(R.string.preset_Major_Up_4), variables.getLarge_increase());
-        editor.putInt(getString(R.string.preset_Minor_Down_4), variables.getSmall_decrease());
-        editor.putInt(getString(R.string.preset_Minor_Up_4), variables.getSmall_increase());
+        editor.putInt("Major_Down_4", variables.getLarge_decrease());
+        editor.putInt("Major_Up_4", variables.getLarge_increase());
+        editor.putInt("Minor_Down_4", variables.getSmall_decrease());
+        editor.putInt("Minor_Up_4", variables.getSmall_increase());
         editor.commit();
-*/
+
     }
 
 
