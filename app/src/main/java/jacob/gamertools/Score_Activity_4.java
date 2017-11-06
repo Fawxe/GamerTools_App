@@ -19,7 +19,7 @@ public class Score_Activity_4 extends AppCompatActivity {
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
         int Minor_Up_4 = sharedPref.getInt("Minor_Up_4", 1);
         int Major_Up_4 = sharedPref.getInt("Major_Up_4", 10);
-        int Minor_Down_4 = sharedPref.getInt("preset_Minor_Down_4", 1);
+        int Minor_Down_4 = sharedPref.getInt("Minor_Down_4", 1);
         int Major_Down_4 = sharedPref.getInt("Major_Down_4", 10);
 
         variables.setLarge_decrease(Major_Down_4);
@@ -94,6 +94,53 @@ public class Score_Activity_4 extends AppCompatActivity {
         editor.putInt("Minor_Down_4", variables.getSmall_decrease());
         editor.putInt("Minor_Up_4", variables.getSmall_increase());
         editor.commit();
+
+    }
+
+
+    public void click_Preset_4(View view)//go to Scorekeeping screen on button click
+    {
+        String[] choiceArray = {"Save Preset","Load Preset"};
+
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("What would you like to do?");
+        alertDialogBuilder.setItems(choiceArray, new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+
+                if(which==0)
+                {
+                    SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putInt("Major_Down_4", variables.getLarge_decrease());
+                    editor.putInt("Major_Up_4", variables.getLarge_increase());
+                    editor.putInt("Minor_Down_4", variables.getSmall_decrease());
+                    editor.putInt("Minor_Up_4", variables.getSmall_increase());
+                    editor.commit();
+                }
+
+                else if(which==1)
+                {
+                    SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);  //sets up persistent memory
+                    int Minor_Up = sharedPref.getInt("Minor_Up_Preset_4", 1);
+                    int Major_Up = sharedPref.getInt("Major_Up_Preset_4", 10);
+                    int Minor_Down = sharedPref.getInt("Minor_Down_Preset_4", 1);
+                    int Major_Down = sharedPref.getInt("Major_Down_Preset_4", 10);
+
+                    variables.setLarge_decrease(Major_Down);
+                    variables.setLarge_increase(Major_Up);
+                    variables.setSmall_increase(Minor_Up);
+                    variables.setSmall_decrease(Minor_Down);
+                }
+                else
+                {}
+
+            }});
+
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
 
     }
 

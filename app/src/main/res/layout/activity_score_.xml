@@ -126,6 +126,18 @@
         tools:context="jacob.gamertools.Score_Activity">
 
 
+        <Button
+            android:id="@+id/Preset"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:onClick="click_Preset"
+            android:text="Preset"
+            android:visibility="visible"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" />
+
         <ImageButton
             android:id="@+id/minor_Down_Button"
             android:layout_width="50dp"
@@ -226,9 +238,10 @@
             android:layout_height="wrap_content"
             android:onClick="click_Options_Tab"
             android:text="@string/options"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="-207dp"
-            tools:layout_editor_absoluteY="654dp"
-            tools:ignore="MissingConstraints" />
+            tools:layout_editor_absoluteY="654dp" />
 
     </android.support.constraint.ConstraintLayout>
 

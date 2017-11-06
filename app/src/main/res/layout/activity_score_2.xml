@@ -130,6 +130,18 @@
             tools:context="jacob.gamertools.Score_Activity_2">
 
             <Button
+                android:id="@+id/Preset_2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:onClick="click_Preset_2"
+                android:text="Preset"
+                android:visibility="visible"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp" />
+
+            <Button
                 android:id="@+id/Options_Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
