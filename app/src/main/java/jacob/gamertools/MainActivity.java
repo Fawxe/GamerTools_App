@@ -84,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void click_Premade_Button(View view) //go to Dice screen on button click
+    {
+        startActivity(new Intent(MainActivity.this, Premade_Activity.class));
 
+    }
 
 }

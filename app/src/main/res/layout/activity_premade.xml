@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/Scrabble_Button"
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:onClick="click_Scrabble_Button"
+        android:text="Scrabble" />
+
+    <Button
+        android:id="@+id/Monopoly_Button"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:onClick="click_Monopoly_Button"
+        android:text="Monopoly" />
+
+    <Button
+        android:id="@+id/MTG_Button"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:onClick="click_MTG_Button"
+        android:text="Magic The Gathering" />
+
+</LinearLayout>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GamerTools.iml" filepath="$PROJECT_DIR$/GamerTools.iml" />
+      <module fileurl="file://C:\Users\jrq5y\AndroidStudioProjects\GamerTools_App\GamerTools.iml" filepath="C:\Users\jrq5y\AndroidStudioProjects\GamerTools_App\GamerTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/GamerTools_App.iml" filepath="$PROJECT_DIR$/GamerTools_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
