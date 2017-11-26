@@ -56,7 +56,7 @@ public class Dice_Activity extends AppCompatActivity {
                 max=dice*sides;
 
             Random rand = new Random(System.currentTimeMillis());  //RNG based on current Millisecond
-            result = rand.nextInt(max) + dice;
+            result = rand.nextInt(max-dice+1) + dice;
         } catch(ArithmeticException e)
         {
             overflow=true;
@@ -71,6 +71,35 @@ public class Dice_Activity extends AppCompatActivity {
 
         TextView BackLog = (TextView) findViewById(R.id.BackLog_Text);
         String BackLog_Text= (String) BackLog.getText();
-        BackLog.setText(BackLog_Text+result+"\n");
+        BackLog.setText(BackLog_Text+"\n"+result);
+
+
+        if (dice==2)
+        {
+            if(result==2||result==12)
+            {
+                Roll_Result.append("\n Double!");
+            }
+
+            }
+            if(result==4||result==10) {
+                Random rand = new Random(System.currentTimeMillis());  //RNG based on current Millisecond
+                result = rand.nextInt(10) + dice;
+                if (result > 6) {
+                    Roll_Result.append("\n Double!");
+                }
+            }
+
+                if(result==6||result==8)
+            {
+                Random rand = new Random(System.currentTimeMillis());  //RNG based on current Millisecond
+                result = rand.nextInt(10) + dice;
+                if (result>10)
+                {
+                    Roll_Result.append("\n Double!");
+                }
+            }
+        }
+
+
     }
-}
