@@ -38,7 +38,13 @@ public class Monopoly_Activity extends AppCompatActivity {
         TextView Dollar_100_Amount = (TextView) findViewById(R.id.Dollar_100_Amount);
         TextView Dollar_500_Amount = (TextView) findViewById(R.id.Dollar_500_Amount);
 
-        int Money_Change_Num = Integer.parseInt(Money_Change.getText().toString());
+        int Money_Change_Num;
+
+        try {
+            Money_Change_Num = Integer.parseInt(Money_Change.getText().toString());
+        }catch(IllegalArgumentException e)                  //if invalid value, don't crash
+        {Money_Change_Num=0;}
+
         int Money_Total_Num = Integer.parseInt(Money_Total.getText().toString());
         int Dollar_1_Num = Integer.parseInt(Dollar_1.getText().toString());
         int Dollar_5_Num = Integer.parseInt(Dollar_5.getText().toString());
