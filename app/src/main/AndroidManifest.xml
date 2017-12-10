@@ -22,8 +22,6 @@
         <activity android:name=".Score_Activity_2" />
         <activity android:name=".Score_Activity_3" />
         <activity android:name=".Score_Activity_4" />
-        <activity android:name=".Score_Activity_5" />
-        <activity android:name=".Score_Activity_6" />
         <activity android:name=".Premade_Activity" />
         <activity android:name=".Monopoly_Activity" />
         <activity android:name=".MTG_Activity" />

@@ -66,7 +66,7 @@ public class Dice_Activity extends AppCompatActivity {
         Roll_Result.setText(result + ""); //convert number to string
         if(overflow)
         {
-            Roll_Result.setText("Error:Result too large.");
+            Roll_Result.setText("Result too large.");
         }
 
         TextView BackLog = (TextView) findViewById(R.id.BackLog_Text);

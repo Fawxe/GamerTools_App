@@ -53,16 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, Score_Activity_4.class));
                 }
 /*
-                else if(which==4)
-                {
-                    startActivity(new Intent(MainActivity.this, Score_Activity_5.class));
-                }
 
-
-                else if(which==5)
-                {
-                    startActivity(new Intent(MainActivity.this, Score_Activity_6.class));
-                }
 */
                 else
                 {
